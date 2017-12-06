@@ -22,23 +22,23 @@ yreal = 3
 for i in range(5):
      raio.append(10**((ro0[i] - rok[i])/(10*lk[i])))
      print(raio[i])
-A = np.matrix([[xi[1] - xi[0], yi[1] - yi[0]],
- [xi[0] - xi[1], yi[0] - yi[1]],
- [xi[0] - xi[2], yi[0] - yi[2]],
- [xi[0] - xi[3], yi[0] - yi[3]],
- [xi[0] - xi[4], yi[0] - yi[4]]])
+A = np.matrix([[xi[4] - xi[0], yi[4] - yi[0]],
+               [xi[4] - xi[1], yi[4] - yi[1]],
+               [xi[4] - xi[2], yi[4] - yi[2]],
+               [xi[4] - xi[3], yi[4] - yi[3]],
+               [xi[1] - xi[4], yi[1] - yi[4]]])
 #Wi = Xi:^2 + Yi^2 - Di^2
-B = np.matrix([[  (xi[1]**2 + yi[1]**2 -raio[1]**2) - (xi[0]**2 + yi[0]**2 -raio[0]**2)],
-        [(xi[0]**2 + yi[0]**2 -raio[0]**2) - (xi[1]**2 + yi[1]**2 -raio[1]**2)],
-        [(xi[0]**2 + yi[0]**2 -raio[0]**2) - (xi[2]**2 + yi[2]**2 -raio[2]**2)],
-        [(xi[0]**2 + yi[0]**2 -raio[0]**2) - (xi[3]**2 + yi[3]**2 -raio[3]**2)],
-        [(xi[0]**2 + yi[0]**2 -raio[0]**2) - (xi[4]**2 + yi[4]**2 -raio[4]**2)]])
+B = np.matrix([[  (xi[4]**2 + yi[4]**2 -raio[4]**2) - (xi[0]**2 + yi[0]**2 -raio[0]**2)],
+                 [(xi[4]**2 + yi[4]**2 -raio[4]**2) - (xi[1]**2 + yi[1]**2 -raio[1]**2)],
+                 [(xi[4]**2 + yi[4]**2 -raio[4]**2) - (xi[2]**2 + yi[2]**2 -raio[2]**2)],
+                 [(xi[4]**2 + yi[4]**2 -raio[4]**2) - (xi[3]**2 + yi[3]**2 -raio[3]**2)],
+                 [(xi[1]**2 + yi[1]**2 -raio[1]**2) - (xi[4]**2 + yi[4]**2 -raio[4]**2)]])
 
 
 print(A)
 print(B)
 #(At * A)^-1 * B
-
+A *= 2
 X = (A.T * A).I * A.T * B
 print(X)
 
@@ -73,4 +73,4 @@ ax.add_patch(circle4)
 ax.add_patch(circle5)
 plt.show()
 
-#fig.savefig('caso1.png')
+fig.savefig('caso2.png')
