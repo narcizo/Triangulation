@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import math
+
 ################### Variáveis #######################
 xi = [1.55, -4.02, -4.40, 9.27, 9.15]
 yi = [17.63, 0, 9.6, 4.64, 12]
