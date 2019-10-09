@@ -63,8 +63,8 @@ ax.cla()
 ax.set_xlim((-15, 30))
 ax.set_ylim((-15, 30))
 
-ax.plot(xreal, yreal, 'o', color='r')#real
-ax.plot(X[0][0], X[1][0], 'go', color='g')#estimado
+ax.plot(xreal, yreal, 'o', color='r') #real
+ax.plot(X[0][0], X[1][0], 'go', color='g') #estimado
 
 ax.add_patch(circle1)
 ax.add_patch(circle2)
