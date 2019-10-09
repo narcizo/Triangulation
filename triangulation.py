@@ -73,4 +73,5 @@ ax.add_patch(circle4)
 ax.add_patch(circle5)
 plt.show()
 
+
 fig.savefig('caso2.png')
